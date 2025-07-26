@@ -1,0 +1,71 @@
+---
+title: "RetroTVMalina"
+url: "projects/retrotv"
+layout: "single"
+---
+
+<h1>RetroTVMalina</h1>
+
+<p>Do tego projektu zostały wykorzystane:</p>
+<li>Raspberry Pi 4B 1GB</li>
+<li>Pilot do PC</li>
+<li>Komputer serwerowy z Jellyfin i ErsatzTV</li>
+
+<p>Czy zastanawialiście się jak zrobić tak, żeby Jetix wrócił na anteny, ale bez konieczności błagania
+    o to Disneya? Zrobiłem to! RetroTVMalina to projekt, który pozwala mi na oglądanie starych
+    kanałów telewizyjnych, które kiedyś były dostępne w Polsce za dzieciaka.</p>
+<p>Udało mi się, ale to wymagało dużo rozkminiania i ogarnięcia conieco z Jellyfinem i ErsatzTV.</p>
+<p>Podobnie jak ja, też możecie to zrobić, ale wyjaśnię to w prostych słowach, jak ja to zrobiłem.
+    Tylko proszę o niezadawanie mi pytań bez odpowiedzi, bo ten tutorial robię dla kumatych, nie dla
+    tych mniej aktywnych, którzy nie chcą nic jednak z tym zrobić.</p>
+<p>Zatem do dzieła!</p>
+<h2>Na dobry początek</h2>
+<p>Co do początku, trzeba najpierw ogarnąć różne archiwa nagrań starych seriali i programów, w tym naszych ulubionych bajek dzieciństwa.</p>
+<p>Ze względów legalnych, nie mogę zdradzać, skąd wziąć takie nagrania, ale mogę zasugerować, żeby przejrzeć swoje szafki w poszukiwaniu
+    starych kaset i płyt DVD.</p>
+<p>Potem jeśli zdobędziecie takie nagrania, to trzeba je wsadzić do Jellyfina, co jest oczywiście proste, ale będę odsyłał do tutoriali związanych z Jellyfin.</p>
+<p>Potem trzeba dojść do ErsatzTV, żeby ogarnąć parę rzeczy związanych z tworzeniem swoich kanałów.</p>
+<p>W przypadku Ersatza TV, to odsyłam do filmiku chudego dredda o "kapturowym laboratorium Dextera", gdzie jest dużo
+    rozkminy na temat gromadzenia serwerowych archiwów oraz "jak oglądam stare kanały telewizyjne (Jetix w 2024 roku)", gdzie dowiecie się mnóstwo rzeczy o ErsatzTV.
+</p>
+
+<h2>ErsatzTV</h2>
+<p>ErsatzTV to program, który pozwala na tworzenie własnych kanałów telewizyjnych z nagraniami, które mamy w Jellyfinie.
+    Dzięki niemu możemy stworzyć kanał, który będzie odtwarzał nasze ulubione programy i bajki w losowej lub ustalonej przez nas kolejności.</p>
+    <p>Takie kanały FAST przed kanałami FAST, ale z mnóstwem rozkminiania o Fillerach itp.</p>
+    <img src="img/retrotv/ersatztv_interface.png" alt="ErsatzTV Interface" style="width: 100%; max-width: 600px;">
+    <h3>Tworzenie kanału</h3>
+    <p>Najpierw trzeba stworzyć kanał, tj. dać mu numer kanału, logo widoczne w harmonogramie oraz na prawym górnym rogu ekranu.</p>
+    <p>Potem trzeba będzie dodać programy - w tym wypadku pomoże Jellyfin, jeśli zlinkujecie Jellyfin do ErsatzaTV, to ErsatzTV z automata wsysa te programy jakie macie.</p>
+    <h3>Zarządzanie fillerami</h3>
+        <li>Pre-Roll - z doświadczenia mówię, że to mi służy jako miejsce na identy.</li>
+        <li>Mid-Roll - zwykle podczas przerw między rozdziałami, ale nie korzystam.</li>
+        <li>Post-Roll - to co zwykle jest po programie.</li>
+        <li>Tail - to służy jako coś, co można puszczać dopóki nie będzie leciała kolejna bajka - w tym wypadku, dodać można tam reklamy.</li>
+        <li>Fallback - filler, który zapełnia i loopuje, by wypełnić pozostałe dziury.</li>
+    <h3>Harmonogramy</h3>
+    <p>W sekcji harmonogramy można organizować programy i kiedy co ma lecieć. W moim przypadku, zadziałało wszystko jako programowanie
+        harmonogramowanych programów, które lecą jako One i mają fillery Post-Roll (gdzie wstawić można różne tzw. "polecajki" czyli zapowiedzi) i Tail (czyli reklamy).
+    </p>
+    <h3>Playout</h3>
+    <p>Playouta można tworzyć za pomocą dodania harmonogramu do playouta oraz ustawić pewien harmonogram jako alternatywny.</p>
+<h2>Efekt Końcowy</h2>
+<p>Po ogarnięciu conieco i stworzeniu takich kanałów, można się delektować starą telewizją podłączając do Kodi, kopiując adresy telewizji do Kodi.
+    Problem polega na tym, że niestety, trzeba mieć włączony serwerowy komputer cały czas, żeby to działało, więc trzeba iść na jakiś kompromis, żeby
+    mieć swoją telewizję w swojej malince.</p>
+<p>W moim przypadku, mam Raspberry Pi 4B 1GB, które jest podłączone do mojego starego telewizora NORDMENDE Galaxy 36,
+    który ma wejście RF, dlatego jedyne co trzeba mieć, by to działało sensownie, to kabel antenowy RF oraz przełącznik AVtoRF, żeby to podłączyć.
+</p>
+<p>I w sumie tyle. Nie wiem, czy co tam jeszcze opowiadać, ale w razie czego możemy pogadać na Discordzie albo poprzez kontakt e-mail.</p>
+
+Przejdź do <a href="/projects">strony projektów</a> lub <a href="/en/projects">English version</a>.
+
+<p>Jeśli chcesz dowiedzieć się więcej o tej zajawce, zachęcam do zajrzenia do tych źródeł inspiracji.</p>
+
+<h2>Inspiracje</h2>
+<h3>Filmik <a href=https://www.youtube.com/@chudydredd>chudego dredda</a> o "kapturowym laboratorium dextera"</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qrJqwy5O328?si=ENETC7vnT6gUmi-K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<h3>Filmik tego samego autora o starej telewizji</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1AzBuruNwlQ?si=PmkDn2jcd7VDeIbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<h3>Serwer Ersatz.tv na Discordzie</h3>
+<a href="https://discord.ersatztv.org/">Official ErsatzTV Discord Server</a>

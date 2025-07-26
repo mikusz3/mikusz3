@@ -1,0 +1,24 @@
+baseURL = 'https://mikusz3.pl/'
+languageCode = 'pl-pl'
+title = 'mikusz3 - Strona stworzona w HUGO'
+defaultContentLanguage = 'pl'
+defaultContentLanguageInSubdir = false  # Zmienione na false
+theme = 'retro-basic'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[languages]
+  [languages.pl]
+    languageName = 'Polski'
+    weight = 1
+    contentDir = "content"
+    title = 'mikusz3 - Strona stworzona w HUGO'
+
+  [languages.en]
+    languageName = 'English'
+    weight = 2
+    contentDir = "content/en"
+    title = 'mikusz3 - Website created in HUGO'

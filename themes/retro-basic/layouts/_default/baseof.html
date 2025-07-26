@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <title>{{ .Title }}</title>
+  <link rel="stylesheet" href="/css/retro.css">
+  <style>
+    nav img {
+      width: 100px; /* or any size that looks right */
+      margin: 4px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Banner -->
+  <header>
+    <img src="/img/mikusz3_banner.png" alt="mikusz3 banner" style="width: 100%; max-width: 1000px; display: block; margin: 0 auto;">
+  </header>
+
+  <!-- Navigation -->
+  <nav style="text-align: center; margin-top: 1em;">
+    {{- $lang := .Site.Language.Lang -}}
+    {{- $isEnglish := or (eq $lang "en") (hasPrefix .RelPermalink "/en/") -}}
+
+    {{ if $isEnglish }}
+      <!-- English Navigation -->
+      <a href="/en/"><img src="/img/home_en.png" alt="Home"></a>
+      <a href="/en/about/"><img src="/img/about_en.png" alt="About"></a>
+      <a href="/en/blog/"><img src="/img/blog_en.png" alt="Blog"></a>
+      <a href="/en/contact/"><img src="/img/contact_en.png" alt="Contact"></a>
+      <a href="/en/hardware/"><img src="/img/hardware.png" alt="Hardware"></a>
+      <a href="/en/links/"><img src="/img/links_en.png" alt="Links"></a>
+      <a href="/en/projects/"><img src="/img/projects_en.png" alt="Projects"></a>
+      <a href="/"><img src="/img/flag-pl.png" alt="Polski"></a>
+    {{ else }}
+      <!-- Polish Navigation -->
+      <a href="/"><img src="/img/home.png" alt="Strona główna"></a>
+      <a href="/about/"><img src="/img/about.png" alt="O mnie"></a>
+      <a href="/blog/"><img src="/img/blog.png" alt="Blog"></a>
+      <a href="/contact/"><img src="/img/contact.png" alt="Kontakt"></a>
+      <a href="/hardware/"><img src="/img/hardware.png" alt="Sprzęt"></a>
+      <a href="/links/"><img src="/img/links.png" alt="Linki"></a>
+      <a href="/projects/"><img src="/img/projects.png" alt="Projekty"></a>
+      <a href="/en/"><img src="/img/flag-us.png" alt="English"></a>
+    {{ end }}
+  </nav>
+
+  <!-- Debug info (usuń po naprawieniu) -->
+  <!-- 
+  <div style="background: #f0f0f0; padding: 10px; margin: 10px; font-size: 12px;">
+    Debug: Lang = {{ .Site.Language.Lang }}, RelPermalink = {{ .RelPermalink }}
+  </div>
+  -->
+
+  <!-- Page content -->
+  <main>
+    {{ block "main" . }}
+      {{ .Content }}
+    {{ end }}
+  </main>
+
+  <footer style="text-align: center; margin-top: 2em;">
+    <small>Site built with Hugo</small>
+  </footer>
+</body>
+</html>

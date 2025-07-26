@@ -1,0 +1,27 @@
+<div class="nav-buttons">
+
+  {{ if eq .Lang "pl" }}
+    <a href="/index"><img src="/img/home.png" alt="Strona główna"></a>
+    <a href="/about"><img src="/img/about.png" alt="O mnie"></a>
+    <a href="/blog"><img src="/img/blog.png" alt="Blog"></a>
+    <a href="/contact"><img src="/img/contact.png" alt="Kontakt"></a>
+    <a href="/hardware"><img src="/img/hardware.png" alt="Hardware"></a>
+    <a href="/links"><img src="/img/links.png" alt="Linki"></a>
+    <a href="/projects"><img src="/img/projects.png" alt="Projekty"></a>
+
+    <!-- Language switch buttons -->
+    <a href="/en/"><img src="/img/flag-us.png" alt="Switch to English"></a>
+  {{ else if eq .Lang "en" }}
+    <a href="/en/index"><img src="/img/home_en.png" alt="Home"></a>
+    <a href="/en/about"><img src="/img/about_en.png" alt="About"></a>
+    <a href="/en/blog"><img src="/img/blog_en.png" alt="Blog"></a>
+    <a href="/en/contact"><img src="/img/contact_en.png" alt="Contact"></a>
+    <a href="/en/hardware"><img src="/img/hardware.png" alt="Hardware"></a>
+    <a href="/en/links"><img src="/img/links_en.png" alt="Links"></a>
+    <a href="/en/projects"><img src="/img/projects_en.png" alt="Projects"></a>
+
+    <!-- Language switch buttons -->
+    <a href="/en/"><img src="/img/flag-us.png" alt="Switch to English"></a>
+  {{ end }}
+
+</div>

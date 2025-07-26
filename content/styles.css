@@ -1,0 +1,47 @@
+.equipment-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  margin: 20px 0;
+}
+
+.equipment-table caption {
+  font-size: 2em;
+  font-weight: bold;
+  padding: 10px;
+  caption-side: top;
+  text-align: center;
+}
+
+.equipment-table th, 
+.equipment-table td {
+  border: 1px solid #888;
+  padding: 8px 12px;
+  vertical-align: top;
+}
+
+.equipment-table th.section-header {
+  background-color: #222;
+  color: #fff;
+  font-size: 1.3em;
+  text-align: center;
+  padding: 12px;
+}
+
+.equipment-table tr.subsection-header td {
+  background-color: #555;
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-top: 2px solid #000;
+}
+
+.equipment-table tr:nth-child(even) td {
+  background-color: #f7f7f7;
+}
+
+.equipment-table tr .empty {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+}

@@ -1,0 +1,93 @@
+---
+title: "RetroTVRaspberryPi"
+url: "en/projects/retrotv"
+layout: "single"
+---
+
+<h1>RetroTVRaspberryPi</h1>
+
+<p>This project uses the following components:</p>
+<li>Raspberry Pi 4B 1GB</li>
+<li>PC Remote</li>
+<li>Server PC running Jellyfin and ErsatzTV</li>
+
+<p>Have you ever wondered how to bring Jetix back on air, but without begging Disney for it? I did it!  
+RetroTVRaspberryPi is a project that allows me to watch old TV channels that were once available in Poland when I was a kid.</p>
+
+<p>I made it work — but it required a lot of thinking and figuring out how to use Jellyfin and ErsatzTV.</p>
+
+<p>Just like I did, you can do it too. I’ll explain it in simple terms how I did it.  
+Just please don’t ask me obvious questions — this tutorial is for those who are already somewhat familiar, not for people who won’t lift a finger.</p>
+
+<p>Let’s get started!</p>
+
+<h2>Getting Started</h2>
+
+<p>To begin with, you’ll need to gather recordings of old shows and cartoons, especially those childhood favorites.</p>
+
+<p>For legal reasons, I can't tell you where to find these recordings,  
+but I suggest checking your drawers for old VHS tapes or DVDs.</p>
+
+<p>Once you have the recordings, you’ll want to add them to Jellyfin.  
+That part is pretty easy — and I’ll link some guides on how to set up Jellyfin if needed.</p>
+
+<p>Next, you’ll need to dive into ErsatzTV, which handles the creation of custom TV channels.</p>
+
+<p>When it comes to ErsatzTV, I highly recommend watching chudy dredd’s video about “Dexter’s Hood Lab,”  
+as well as his “Watching Old TV Channels (Jetix in 2024)” — both are full of useful info about ErsatzTV.</p>
+
+<h2>ErsatzTV</h2>
+<p>ErsatzTV is software that lets you create your own TV channels using recordings stored in Jellyfin.  
+With it, you can make a channel that plays your favorite shows or cartoons in either random or planned order.</p>
+
+<p>Think of it as FAST channels before FAST was a thing — but with more thinking involved about fillers, timing, and whatnot.</p>
+
+<img src="img/retrotv/ersatztv_interface.png" alt="ErsatzTV Interface" style="width: 100%; max-width: 600px;">
+
+<h3>Creating a Channel</h3>
+<p>Start by creating a channel: assign it a number, upload a logo that shows up in the schedule and on-screen overlay.</p>
+<p>Next, add your shows. If you've linked Jellyfin to ErsatzTV, it will automatically pull your media library.</p>
+
+<h3>Managing Fillers</h3>
+<ul>
+  <li><strong>Pre-Roll</strong> – I use this for station idents.</li>
+  <li><strong>Mid-Roll</strong> – for breaks between episodes, though I don’t really use it.</li>
+  <li><strong>Post-Roll</strong> – what plays after a program ends.</li>
+  <li><strong>Tail</strong> – something to play before the next cartoon, e.g. ads or promos.</li>
+  <li><strong>Fallback</strong> – a looping filler to fill in remaining gaps.</li>
+</ul>
+
+<h3>Schedules</h3>
+<p>In the Schedules section, you organize when each program airs.  
+For me, I used scheduled shows with Post-Roll fillers ("Coming Up Next...") and Tail fillers (ads).</p>
+
+<h3>Playout</h3>
+<p>Playout is made by assigning a schedule to it, and optionally setting a fallback schedule too.</p>
+
+<h2>The Final Result</h2>
+<p>Once everything is working and your channels are created, you can enjoy retro TV  
+by plugging it into Kodi and adding your ErsatzTV stream URLs.</p>
+
+<p>The downside? You’ll need to keep your server PC on 24/7 — so you’ll need a compromise  
+if you want your TV on your Pi instead.</p>
+
+<p>In my case, I use a Raspberry Pi 4B 1GB connected to an old NORDMENDE Galaxy 36 TV via RF.  
+To get it working, I just needed an RF antenna cable and an AV-to-RF converter.</p>
+
+<p>And that’s basically it! I’m not sure what else to say, but if you want to talk,  
+we can chat on Discord or via email.</p>
+
+<p>Go back to the <a href="/projects">project page</a> or <a href="/projects">Polish version</a>.</p>
+
+<p>If you want to learn more about this setup, check out the sources of inspiration below.</p>
+
+<h2>Inspiration</h2>
+
+<h3>Video by <a href="https://www.youtube.com/@chudydredd">chudy dredd</a> about “Dexter’s Hood Laboratory”</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qrJqwy5O328?si=ENETC7vnT6gUmi-K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h3>Another video from the same creator about old TV</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1AzBuruNwlQ?si=PmkDn2jcd7VDeIbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h3>ErsatzTV Discord Server</h3>
+<a href="https://discord.ersatztv.org/">Official ErsatzTV Discord Server</a>
